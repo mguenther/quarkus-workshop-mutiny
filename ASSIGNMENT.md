@@ -24,7 +24,7 @@ Received batch: [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
 
 2. Multiple Subscriptions
 
-An `StockExchange` object is available as part of the test class. This class only exposes one method `liveTrades` that returns a `Multi<Trade>` and continously generated imaginary stock trades. 
+An `StockExchange` object is available as part of the test class. This class only exposes one method `liveTrades` that returns a `Multi<Trade>` and continuously generated imaginary stock trades. 
 
 Your task is to subscribe twice to this Multi and print the trades received to the console. Take a look at those trades as your subscribers will output them simultaneously - is this what you expected and if not, what could be the problem here?
 
@@ -36,7 +36,7 @@ Implement this the naive way and see what happens - how can we mitigate this thi
 
 ## Task #2: More Mutiny
 
-Task 2 delves deeper into the things we will have to manage / know if we want to use Mutiny effectively. Again we have some Unit-Tests, this time in the file `MutinyAdvancesTest.java`.
+Task 2 delves deeper into the things we will have to manage / know if we want to use Mutiny effectively. Again we have some Unit-Tests, this time in the file `MutinyAdvancedTest.java`.
 
 1. It is quite common that we have to use the result of a `Multi` or `Uni` as a signal to trigger some other non-blocking operation and merge those things. In this task you must create a Multi that ticks every second, then gets the result of the `dataUni` and merges the tick with the retrieved string to output the resulting string on the console.
 
