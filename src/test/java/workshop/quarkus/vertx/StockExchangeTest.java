@@ -39,7 +39,7 @@ public class StockExchangeTest {
 
     @Test
     void task3_1_subscribeTradeVolume() {
-        final var volumePerTrade = new Random().nextLong(10);
+        final var volumePerTrade = new Random().nextLong(1, 10);
         var sut = new StockService(new StockExchange(10, () -> new Trade(volumePerTrade, Stock.GE, 1.0, 1.0)));
 
         UniAssertSubscriber<Long> subscriber = sut.tradeVolumeOfNextHundredTrades()
