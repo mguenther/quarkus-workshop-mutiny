@@ -8,7 +8,7 @@ In any case, don't hesitate to talk to us if you're stuck on a given problem!
 
 ## Task 1.1
 
-One way to do this is to tell mutiny to group the resulting data into lists of different sizes. Different data structures are also supported, but for our case a list is what we want. Code-wise this can look like this:
+One way to do this is to tell Mutiny to group the resulting data into lists of different sizes. Different data structures are also supported, but for our case a list is what we want. Code-wise this can look like this:
 
 ```java 
 numbers.group().intoLists().of(10)
