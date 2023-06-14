@@ -1,11 +1,10 @@
 package workshop.quarkus.vertx;
 
-import io.smallrye.mutiny.helpers.test.UniAssertSubscriber;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.impl.logging.Logger;
 import io.vertx.core.impl.logging.LoggerFactory;
 import io.vertx.mutiny.core.Vertx;
-import workshop.quarkus.vertx.verticles.MutinyVerticle;
+import workshop.quarkus.vertx.verticles.StockVerticle;
 import workshop.quarkus.vertx.verticles.WebVerticle;
 
 public class Application {
@@ -22,7 +21,7 @@ public class Application {
 
         LOG.info("Deployment Starting");
         vertx.deployVerticleAndAwait(new WebVerticle(), deploymentOptions);
-        vertx.deployVerticleAndAwait(new MutinyVerticle(), deploymentOptions);
+        vertx.deployVerticleAndAwait(new StockVerticle(), deploymentOptions);
         LOG.info("Deployment completed");
     }
 }

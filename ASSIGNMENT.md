@@ -22,7 +22,7 @@ Received batch: [81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
 Received batch: [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
 ```
 
-2Multiple Subscriptions
+2. Multiple Subscriptions
 
 An `StockExchange` object is available as part of the test class. This class only exposes one method `liveTrades` that returns a `Multi<Trade>` and continously generated imaginary stock trades. 
 

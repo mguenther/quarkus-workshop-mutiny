@@ -6,11 +6,11 @@ import io.vertx.core.impl.logging.Logger;
 import io.vertx.core.impl.logging.LoggerFactory;
 import workshop.quarkus.vertx.stock.StockExchange;
 
-public class MutinyVerticle extends AbstractVerticle {
+public class StockVerticle extends AbstractVerticle {
 
     private StockExchange stockExchange = new StockExchange();
 
-    private final Logger LOG = LoggerFactory.getLogger(MutinyVerticle.class);
+    private final Logger LOG = LoggerFactory.getLogger(StockVerticle.class);
 
     @Override
     public Uni<Void> asyncStart() {
