@@ -141,7 +141,7 @@ return exchange.liveTrades()
     .onFailure().retry().indefinitely();
 ```
 
-A better version of this would be to make sure that we only retry the errors propagated by the `TradeInspector`. Otherwise we'd casually ignore errors that might come from the `liveTrades()` itself. So if you've seen and done this: great job!
+A better version of this would be to make sure that we only retry the errors propagated by the `TradeInspector`. Otherwise, we'd casually ignore errors that might come from the `liveTrades()` itself. So if you've seen and done this: great job!
 
 ## Task 3.3
 
