@@ -19,7 +19,8 @@ public class StockExchange {
 
     public StockExchange(long tickIntervalMs, Supplier<Trade> generator) {
         this.liveTicker = Multi.createFrom().ticks().every(Duration.of(tickIntervalMs, ChronoUnit.MILLIS))
-                .onItem().transform((tick) -> generator.get());
+                .onItem().transform((tick) -> generator.get())
+                .broadcast().toAllSubscribers();
     }
 
     public StockExchange(long tickIntervalMs) {
